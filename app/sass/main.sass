@@ -1,0 +1,59 @@
+//@import "/app/libs/bootstrap"
+//@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "customVariables";
+//@import (inline) "../node_modules/bootstrap/dist/css/bootstrap.css";
+//@import (inline) "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "part"
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  transition: all .3s ease-out
+
+body
+  background-color: palegreen
+
+a
+  color: black
+  text-decoration: none
+#for_menubar
+ list-style: none
+ display: flex
+ justify-content: left
+ position: relative
+ padding-left: 5px
+ border: 2px solid #3c763d+#444444
+ background-color: #98FB98+#111111
+ >li
+   margin: 5px
+   margin-left: 0
+ li
+   &:hover #for_listLincs
+     display: block
+   a
+    display: block
+    height: 35px
+    width: 110px
+    padding: 10px
+    text-decoration: none
+    &:hover
+     background-color: #2e6da4
+     color: #fff
+ >li>a
+   background-color: #3c763d+#444444
+   color: #761c19
+   text-align: center
+ >li:last-of-type
+   position: absolute
+   right: 0
+#for_listLincs
+  position: absolute
+  background-color: #efefef
+  z-index: 9999
+  display: none
+  list-style: none
+  >li>a
+    color: #121
+    width: auto
+
+@import "mainScss"

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GULP ANGULAR</title>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="App" ng-controller="MainController" class="ng-cloak">
+<header>
+    <div class="for_logo">
+        <img src="img/img2/logo.jpg" alt="logo img">
+        <p>At home it's nice</p>
+        <p>In home is fun</p>
+    </div>
+    <nav class="menu">
+        <ul id="for_menubar">
+            <li><a ng-href="/#!/">Home</a></li>
+            <li>
+                <a href="#">About</a>
+                <ul id="for_listLincs">
+                    <li><a href="#">Who are we</a></li>
+                    <li><a href="#">Our projects</a></li>
+                    <li><a href="#">What we appreciate</a></li>
+                    <li><a href="#">Our goals</a></li>
+                </ul>
+            </li>
+            <li><a ng-href="/#!/post">Pets</a></li>
+            <li><a ng-href="/#!/terr">Exotics</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<button id="top" ng-click="scrollTo('bottom')">Go to bottom of the page</button>
+<br/><br/>
+
+
+
+<ng-view></ng-view>
+
+<button id="bottom" ng-click="scrollTo('top')">Go to top of the page</button>
+
+<script src="js/libs.min.js"></script>
+<!--<script src="js/libs2.min.js"></script>-->
+<script src="js/app.js"></script>
+<script src="js/PostController.js"></script>
+<!--<script src="js/TerrController.js"></script>-->
+<script src="js/servise.js"></script>
+<script src="js/forJQuery.js"></script>
+</body>
+</html>

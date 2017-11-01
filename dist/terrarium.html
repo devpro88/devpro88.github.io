@@ -1,0 +1,35 @@
+<article ng-controller="TerrController" class="for_terr_page" foo>
+
+        <section ng-repeat="post in posts" class="for_sect2">
+            <div class="for_h2">
+                <h2>{{post.title}}</h2>
+            </div>
+            <div ng-repeat="comment in post.comments" class="for_item">
+                <div class="for_name">{{comment.name}}<span>{{comment.kind}}</span></div>
+                <div class="for_images">
+                    <div class="for_img"><img ng-src="{{comment.image1}}" alt="{{comment.alt1}}"/></div>
+                </div>
+                <div class="for_images second_col">
+                    <div class="for_img"><img ng-src="{{comment.image21}}" alt="{{comment.alt21}}"/></div>
+                </div>
+                <section class="descr_main">
+                    <p class="for_descr">{{comment.description}}</p>
+                    <p ng-show = "descr2" class="for_descr">{{comment.description2}}</p>
+                    <p ng-show = "descr2" class="for_descr">{{comment.available}}</p>
+                    <p ng-click="descr2 = true" ng-hide="descr2" class="for_show_descr2">Show more ..</p>
+                    <p ng-click="descr2 = false" ng-hide="!descr2" class="for_show_descr2">Hide additional text</p>
+                    <p class="for_descr for_price">Price: {{comment.price}}</p>
+                </section>
+            </div>
+
+
+        </section>
+
+        <!--"image4": "http://maps.google.com/mapfiles/arrow.png",-->
+
+</article>
+<article id="for_switcher">
+    <div oop>red</div>
+    <div oop>red</div>
+    <div oop>red</div>
+</article>

@@ -1,0 +1,112 @@
+<article>
+    <h1>Home</h1>
+    <!--<article ng-controller="HomeJson">-->
+        <!--<article class="row">rrbbtt-->
+            <!--<ul>-->
+                <!--<li ng-repeat="post in posts">{{post.title}}-->
+                    <!--<ul>-->
+                        <!--<li ng-repeat="comment in post.comments">-->
+                            <!--{{comment.first_name}}-->
+                            <!--<br>{{comment.last_name}}-->
+                            <!--<br><img ng-src = "{{comment.image1}}" alt = "{{comment.alt1}}"/>-->
+                            <!--<img ng-src = "{{comment.image2}}" alt = "{{comment.alt2}}"/>-->
+                            <!--<img ng-src = "{{comment.image3}}" alt = "{{comment.alt3}}"/>-->
+                            <!--<img ng-src = "{{comment.image4}}" alt = "{{comment.alt4}}"/>-->
+                            <!--<br>{{comment.test}}-->
+                            <!--<br><img ng-src = "{{comment.image21}}" alt = "{{comment.alt21}}"/>-->
+                            <!--<img ng-src = "{{comment.image22}}" alt = "{{comment.alt22}}"/>-->
+                            <!--<img ng-src = "{{comment.image23}}" alt = "{{comment.alt23}}"/>-->
+                            <!--<img ng-src = "{{comment.image24}}" alt = "{{comment.alt24}}"/>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--&lt;!&ndash;"image4": "http://maps.google.com/mapfiles/arrow.png",&ndash;&gt;-->
+        <!--</article>-->
+        <!--<form class="for_post_form">-->
+            <!--<input type="text" placeholder="Title" ng-model="form.title">-->
+            <!--<textarea name="body" placeholder="Body" ng-model="form.body"></textarea>-->
+            <!--<button class="btn btn-primary" ng-click="createPost(form)">Send</button>-->
+        <!--</form>-->
+    <!--</article>-->
+
+    <article ng-controller="HomeController">
+        <section class="home_main_descr">
+            I want to go home. It's nice to be at home. After all, you have an exotic pet, like a piece of beautiful wildlife that you've only seen from a distance, through the TV screen ... And now you can scratch the ear of a chinchilla yourself, play with a ferret or feed colorful aquarium fish - it's really fun! And even if the weather is bad outside, or you did not manage to meet friends - it's still interesting to you, and the day does not go wrong - after all, such beauty is at home ...
+        </section>
+        <!--<div>{{myWelcome}}</div>-->
+        <section class="for_flex">
+            <section ng-repeat="classified in classifieds" class="for_sct1">
+                <!--<img src="{{ classified.image }}" alt="ang img1">-->
+                <img src="http://www.louisianasportsman.com/classifieds/pics/p1358549934434943.jpg" alt="ang img1">
+                <div class=" card_content">
+                    <div class="classified-info">
+                        <h2 class="md-title">{{ classified.title }}</h2>
+                        <h3>{{ classified.price }}</h3>
+                        <p>{{ classified.description }}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="for_sct1">
+                <img src="http://www.louisianasportsman.com/classifieds/pics/p1358549934434943.jpg" alt="ang img1">
+                <div class=" card_content">
+                    <div class="classified-info">
+                        <h2 class="md-title">First item</h2>
+                        <h3>$1000</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aliquam animi
+                            architecto aut autem commodi culpa cum debitis dignissimos dolore dolorem doloremque fuga fugiat
+                            harum illo, incidunt ipsa itaque magni maxime minima mollitia nam necessitatibus nemo nobis odit
+                            qui quidem reiciendis reprehenderit sint tempora ullam veritatis voluptatem. Deserunt eaque
+                            exercitationem illum iusto labore natus, provident quisquam sint ullam voluptates! Animi commodi
+                            dolorum in iste iure iusto maxime modi molestiae nobis odit officiis pariatur perspiciatis
+                            placeat porro praesentium provident quaerat, qui repellat reprehenderit sint sunt tempore unde
+                            ut voluptas voluptates! Architecto eos labore laborum laudantium maiores mollitia quidem,
+                            quisquam sunt!</p>
+
+                    </div>
+                </div>
+            </section>
+            <section class="for_sct1">
+                <img src="http://www.louisianasportsman.com/classifieds/pics/p1358549934434943.jpg" alt="ang img1">
+                <div class=" card_content">
+                    <div class="classified-info">
+                        <h2 class="md-title">First item</h2>
+                        <h3>$1000</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aliquam animi
+                            architecto aut autem commodi culpa cum debitis dignissimos dolore dolorem doloremque fuga fugiat
+                            harum illo, incidunt ipsa itaque magni maxime minima mollitia nam necessitatibus nemo nobis odit
+                            qui quidem reiciendis reprehenderit sint tempora ullam veritatis voluptatem. Deserunt eaque
+                            exercitationem illum iusto labore natus, provident quisquam sint ullam voluptates! Animi commodi
+                            dolorum in iste iure iusto maxime modi molestiae nobis odit officiis pariatur perspiciatis
+                            placeat porro praesentium provident quaerat, qui repellat reprehenderit sint sunt tempore unde
+                            ut voluptas voluptates! Architecto eos labore laborum laudantium maiores mollitia quidem,
+                            quisquam sunt!</p>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+    </article>
+
+    <p>Enter your name</p>
+    <input type="text" ng-change="message(data)" ng-model="data">
+    <h1 id="for_name">{{text}}</h1>
+
+    <ul>
+        <li ng-repeat="country in countries">
+            {{ country.name }}
+            <ul id="countr">
+                <li ng-repeat="city in country.cities">
+                    {{ city.name }}
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>rrbbff Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis expedita illo, inventore
+        magni natus?</p>
+    <p>Lorem ipsum dolor sit amet. rrbb</p>
+    <a href="#" class="pull-right">reed more..</a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. RRBBkf</p>
+
+</article>
