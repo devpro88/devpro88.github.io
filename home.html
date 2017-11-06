@@ -1,112 +1,201 @@
-<article>
-    <h1>Home</h1>
-    <!--<article ng-controller="HomeJson">-->
-        <!--<article class="row">rrbbtt-->
-            <!--<ul>-->
-                <!--<li ng-repeat="post in posts">{{post.title}}-->
-                    <!--<ul>-->
-                        <!--<li ng-repeat="comment in post.comments">-->
-                            <!--{{comment.first_name}}-->
-                            <!--<br>{{comment.last_name}}-->
-                            <!--<br><img ng-src = "{{comment.image1}}" alt = "{{comment.alt1}}"/>-->
-                            <!--<img ng-src = "{{comment.image2}}" alt = "{{comment.alt2}}"/>-->
-                            <!--<img ng-src = "{{comment.image3}}" alt = "{{comment.alt3}}"/>-->
-                            <!--<img ng-src = "{{comment.image4}}" alt = "{{comment.alt4}}"/>-->
-                            <!--<br>{{comment.test}}-->
-                            <!--<br><img ng-src = "{{comment.image21}}" alt = "{{comment.alt21}}"/>-->
-                            <!--<img ng-src = "{{comment.image22}}" alt = "{{comment.alt22}}"/>-->
-                            <!--<img ng-src = "{{comment.image23}}" alt = "{{comment.alt23}}"/>-->
-                            <!--<img ng-src = "{{comment.image24}}" alt = "{{comment.alt24}}"/>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <!--&lt;!&ndash;"image4": "http://maps.google.com/mapfiles/arrow.png",&ndash;&gt;-->
-        <!--</article>-->
-        <!--<form class="for_post_form">-->
-            <!--<input type="text" placeholder="Title" ng-model="form.title">-->
-            <!--<textarea name="body" placeholder="Body" ng-model="form.body"></textarea>-->
-            <!--<button class="btn btn-primary" ng-click="createPost(form)">Send</button>-->
-        <!--</form>-->
-    <!--</article>-->
+<article id="homePage">
+    <h3 class="dev_descrptn">This project was compiled with the help of <span>GULP</span>, was used Pre-processors SASS and SCSS, <span>FLEX</span> for Responsive web
+        design. Transition between pages without reloading the page, due to ngRoute (AngularJS). Data is obtaine in JSON
+        format via http (<span>AngularJS</span>).</h3>
+    <div class="btn_1"><h1>Pets are interesting and is fun with them!</h1>
+        <div class="btn_1_in"></div>
+    </div>
+    <p class="home_main_descr">
+        I want to go home. It's nice to be at home. After all, you have an exotic pet, like a piece of beautiful
+        wildlife that you've only seen from a distance, through the TV screen ... And now you can scratch the ear of
+        a chinchilla yourself, play with a ferret or feed colorful aquarium fish - it's really fun! And even if the
+        weather is bad outside, or you did not manage to meet friends - it's still interesting to you, and the day
+        does not go wrong - after all, such beauty is at home ...
+    </p>
+    <!--<p>GULP + SASS && SCSS, AngularJS, FLEX, BOOTSTRAP</p>-->
 
-    <article ng-controller="HomeController">
-        <section class="home_main_descr">
-            I want to go home. It's nice to be at home. After all, you have an exotic pet, like a piece of beautiful wildlife that you've only seen from a distance, through the TV screen ... And now you can scratch the ear of a chinchilla yourself, play with a ferret or feed colorful aquarium fish - it's really fun! And even if the weather is bad outside, or you did not manage to meet friends - it's still interesting to you, and the day does not go wrong - after all, such beauty is at home ...
+    <!--<button class="btn btn-danger for_btn1">rrbbss</button>-->
+    <!--<md-button ng-click="openSidebar()" id="for_btn_classds">-->
+        <!--<i class="ion ion-ios-plus-outline"></i>-->
+        <!--<i class="glyphicon glyphicon-plus"></i>-->
+        <!--<i class="glyphicon glyphicon-download"></i>-->
+        <!--New Classifieds-->
+    <!--</md-button>-->
+    <article ng-controller="HomeController" class="ng-cloak">
+
+        <!--<section ng-repeat="post in posts" class="for_sect2bbb">-->
+            <!--<div class="for_h2">-->
+                <!--<h2>{{post.title}}</h2>-->
+            <!--</div>-->
+            <!--<div ng-repeat="comment in post.comments" class="for_itemrrr">-->
+                <!--<div class="for_name">{{comment.name}}<span>{{comment.kind}}</span></div>-->
+                <!--<div class="col-md-8 col-lg-8">-->
+                    <!--<div class="for_img_home"><img ng-src="{{comment.image1}}" alt="{{comment.alt1}}"/></div>-->
+                <!--</div>-->
+                <!--<div class="col-md-8 col-lg-8">-->
+                    <!--<div class="for_img"><img ng-src="{{comment.image21}}" alt="{{comment.alt21}}"/></div>-->
+                <!--</div>-->
+                <!--<section class="descr_main col-md-4 col-lg-4">-->
+                    <!--<p class="for_descr">{{comment.description}}</p>-->
+                    <!--<p ng-show = "descr2" class="for_descr">{{comment.description2}}</p>-->
+                    <!--<p ng-show = "descr2" class="for_descr">{{comment.available}}</p>-->
+                    <!--<p ng-click="descr2 = true" ng-hide="descr2" class="for_show_descr2">Read more ..</p>-->
+                    <!--<p ng-click="descr2 = false" ng-hide="!descr2" class="for_show_descr2">Hide additional text</p>-->
+                    <!--<p class="for_descr for_price">Price: {{comment.price}}</p>-->
+                <!--</section>-->
+            <!--</div>-->
+        <!--</section>-->
+
+        <section ng-repeat="post in posts">
+            <div class="for_h2">
+                <h2>{{post.title}}</h2>
+            </div>
+            <div ng-repeat="comment in post.comments" class="for_item_home">
+                <section class="top_home">
+                    <div class="for_images_home">
+                        <div class="for_img"><img ng-src="{{comment.image1}}" alt="{{comment.alt1}}"/></div>
+                        <div class="for_img"><img ng-src="{{comment.image2}}" alt="{{comment.alt2}}"/></div>
+                    </div>
+                    <section class="descr_main">
+                        <p class="for_descr">{{comment.description}}</p>
+                        <p class="for_descr">{{comment.available}}</p>
+                    </section>
+                </section>
+                <section class="bottom_home">
+                    <div class="for_images_home">
+                        <div class="for_img"><img ng-src="{{comment.image21}}" alt="{{comment.alt21}}"/></div>
+                        <div class="for_img"><img ng-src="{{comment.image22}}" alt="{{comment.alt22}}"/></div>
+                    </div>
+                    <section class="descr_main">
+                        <p class="for_descr">{{comment.description2}}</p>
+                        <p class="for_descr">{{comment.description22}}</p>
+                        <p class="for_descr">{{comment.available2}}</p>
+                    </section>
+                </section>
+            </div>
+
+
         </section>
-        <!--<div>{{myWelcome}}</div>-->
-        <section class="for_flex">
-            <section ng-repeat="classified in classifieds" class="for_sct1">
-                <!--<img src="{{ classified.image }}" alt="ang img1">-->
-                <img src="http://www.louisianasportsman.com/classifieds/pics/p1358549934434943.jpg" alt="ang img1">
-                <div class=" card_content">
-                    <div class="classified-info">
-                        <h2 class="md-title">{{ classified.title }}</h2>
-                        <h3>{{ classified.price }}</h3>
-                        <p>{{ classified.description }}</p>
-                    </div>
-                </div>
-            </section>
-            <section class="for_sct1">
-                <img src="http://www.louisianasportsman.com/classifieds/pics/p1358549934434943.jpg" alt="ang img1">
-                <div class=" card_content">
-                    <div class="classified-info">
-                        <h2 class="md-title">First item</h2>
-                        <h3>$1000</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aliquam animi
-                            architecto aut autem commodi culpa cum debitis dignissimos dolore dolorem doloremque fuga fugiat
-                            harum illo, incidunt ipsa itaque magni maxime minima mollitia nam necessitatibus nemo nobis odit
-                            qui quidem reiciendis reprehenderit sint tempora ullam veritatis voluptatem. Deserunt eaque
-                            exercitationem illum iusto labore natus, provident quisquam sint ullam voluptates! Animi commodi
-                            dolorum in iste iure iusto maxime modi molestiae nobis odit officiis pariatur perspiciatis
-                            placeat porro praesentium provident quaerat, qui repellat reprehenderit sint sunt tempore unde
-                            ut voluptas voluptates! Architecto eos labore laborum laudantium maiores mollitia quidem,
-                            quisquam sunt!</p>
+        <section class="bott_home_sct">
+            <h2 class="for_h2">Just look ...</h2>
+            <img src="img/img0/aqr3.jpg" class="discus11" alt="discus">
+            <h2 class="for_h2 child_dog">Children learn to show kindness and care for others :)</h2>
+            <img src="img/img0/child-and-dog.jpg" class="discus11" alt="child-and-dog">
 
-                    </div>
-                </div>
-            </section>
-            <section class="for_sct1">
-                <img src="http://www.louisianasportsman.com/classifieds/pics/p1358549934434943.jpg" alt="ang img1">
-                <div class=" card_content">
-                    <div class="classified-info">
-                        <h2 class="md-title">First item</h2>
-                        <h3>$1000</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aliquam animi
-                            architecto aut autem commodi culpa cum debitis dignissimos dolore dolorem doloremque fuga fugiat
-                            harum illo, incidunt ipsa itaque magni maxime minima mollitia nam necessitatibus nemo nobis odit
-                            qui quidem reiciendis reprehenderit sint tempora ullam veritatis voluptatem. Deserunt eaque
-                            exercitationem illum iusto labore natus, provident quisquam sint ullam voluptates! Animi commodi
-                            dolorum in iste iure iusto maxime modi molestiae nobis odit officiis pariatur perspiciatis
-                            placeat porro praesentium provident quaerat, qui repellat reprehenderit sint sunt tempore unde
-                            ut voluptas voluptates! Architecto eos labore laborum laudantium maiores mollitia quidem,
-                            quisquam sunt!</p>
-
-                    </div>
-                </div>
-            </section>
         </section>
     </article>
+    <!--<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">-->
+    <!--<md-toolbar>-->
+    <!--<h1 class="md-toolbar-tools">Add a classified</h1>-->
+    <!--<md-content >-->
+    <!--<form>-->
+    <!--<md-input-container>-->
+    <!--<label for="title">Title</label>-->
+    <!--<input type="text" id="title" md-auto-focus>-->
+    <!--</md-input-container>-->
+    <!--<md-input-container>-->
+    <!--<label for="prise">Prise</label>-->
+    <!--<input type="text" id="prise">-->
+    <!--</md-input-container>-->
+    <!--<md-input-container>-->
+    <!--<label for="description">Description</label>-->
+    <!--<input type="text" id="description">-->
+    <!--</md-input-container>-->
+    <!--<md-input-container>-->
+    <!--<label for="image">Image Link</label>-->
+    <!--<input type="text" id="image">-->
+    <!--</md-input-container>-->
+    <!--<md-button class="md-primary">Save</md-button>-->
+    <!--<md-button class="md-primary">Save Edit</md-button>-->
+    <!--<md-button class="md-warn">Cancel</md-button>-->
+    <!--</form>-->
+    <!--</md-content>-->
+    <!--</md-toolbar>-->
+    <!--</md-sidenav>-->
 
-    <p>Enter your name</p>
-    <input type="text" ng-change="message(data)" ng-model="data">
-    <h1 id="for_name">{{text}}</h1>
+    <article ng-controller="HomeController">
 
-    <ul>
-        <li ng-repeat="country in countries">
-            {{ country.name }}
-            <ul id="countr">
-                <li ng-repeat="city in country.cities">
-                    {{ city.name }}
-                </li>
-            </ul>
-        </li>
-    </ul>
+        <!--<div>{{myWelcome}}</div>-->
+        <!--<section class="for_flex">-->
+            <!--<section ng-repeat="classified in classifieds" class="for_sct1">-->
+                <!--&lt;!&ndash;<img src="{{ classified.image }}" alt="ang img1">&ndash;&gt;-->
+                <!--<img src="http://www.louisianasportsman.com/classifieds/pics/p1358549934434943.jpg" alt="ang img1">-->
+                <!--<div class=" card_content">-->
+                    <!--<div class="classified-info">-->
+                        <!--<h2 class="md-title">{{ classified.title }}</h2>-->
+                        <!--<h3>{{ classified.price }}</h3>-->
+                        <!--<p>{{ classified.description }}</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
+            <!--<section class="for_sct1">-->
+                <!--<img src="http://www.louisianasportsman.com/classifieds/pics/p1358549934434943.jpg" alt="ang img1">-->
+                <!--<div class=" card_content">-->
+                    <!--<div class="classified-info">-->
+                        <!--<h2 class="md-title">First item</h2>-->
+                        <!--<h3>$1000</h3>-->
+                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aliquam animi-->
+                            <!--architecto aut autem commodi culpa cum debitis dignissimos dolore dolorem doloremque fuga-->
+                            <!--fugiat-->
+                            <!--harum illo, incidunt ipsa itaque magni maxime minima mollitia nam necessitatibus nemo nobis-->
+                            <!--odit-->
+                            <!--qui quidem reiciendis reprehenderit sint tempora ullam veritatis voluptatem. Deserunt eaque-->
+                            <!--exercitationem illum iusto labore natus, provident quisquam sint ullam voluptates! Animi-->
+                            <!--commodi-->
+                            <!--dolorum in iste iure iusto maxime modi molestiae nobis odit officiis pariatur perspiciatis-->
+                            <!--placeat porro praesentium provident quaerat, qui repellat reprehenderit sint sunt tempore-->
+                            <!--unde-->
+                            <!--ut voluptas voluptates! Architecto eos labore laborum laudantium maiores mollitia quidem,-->
+                            <!--quisquam sunt!</p>-->
 
-    <p>rrbbff Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis expedita illo, inventore
-        magni natus?</p>
-    <p>Lorem ipsum dolor sit amet. rrbb</p>
-    <a href="#" class="pull-right">reed more..</a>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. RRBBkf</p>
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
+            <!--<section class="for_sct1">-->
+                <!--<img src="http://www.louisianasportsman.com/classifieds/pics/p1358549934434943.jpg" alt="ang img1">-->
+                <!--<div class=" card_content">-->
+                    <!--<div class="classified-info">-->
+                        <!--<h2 class="md-title">First item</h2>-->
+                        <!--<h3>$1000</h3>-->
+                        <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aliquam animi-->
+                            <!--architecto aut autem commodi culpa cum debitis dignissimos dolore dolorem doloremque fuga-->
+                            <!--fugiat-->
+                            <!--harum illo, incidunt ipsa itaque magni maxime minima mollitia nam necessitatibus nemo nobis-->
+                            <!--odit-->
+                            <!--qui quidem reiciendis reprehenderit sint tempora ullam veritatis voluptatem. Deserunt eaque-->
+                            <!--exercitationem illum iusto labore natus, provident quisquam sint ullam voluptates! Animi-->
+                            <!--commodi-->
+                            <!--dolorum in iste iure iusto maxime modi molestiae nobis odit officiis pariatur perspiciatis-->
+                            <!--placeat porro praesentium provident quaerat, qui repellat reprehenderit sint sunt tempore-->
+                            <!--unde-->
+                            <!--ut voluptas voluptates! Architecto eos labore laborum laudantium maiores mollitia quidem,-->
+                            <!--quisquam sunt!</p>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</section>-->
+        <!--</section>-->
+    </article>
+
+    <!--<p>Enter your name</p>-->
+    <!--<input type="text" ng-change="message(data)" ng-model="data">-->
+    <!--<h1 id="for_name">{{text}}</h1>-->
+
+    <!--<ul>-->
+        <!--<li ng-repeat="country in countries">-->
+            <!--{{ country.name }}-->
+            <!--<ul id="countr">-->
+                <!--<li ng-repeat="city in country.cities">-->
+                    <!--{{ city.name }}-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</li>-->
+    <!--</ul>-->
+
+    <!--<p>rrbbff Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis expedita illo, inventore-->
+        <!--magni natus?</p>-->
+    <!--<p>Lorem ipsum dolor sit amet. rrbb</p>-->
+    <!--<a href="#" class="pull-right">reed more..</a>-->
+    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. RRBBkf</p>-->
 
 </article>

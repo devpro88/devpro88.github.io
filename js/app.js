@@ -19,12 +19,12 @@ App.config(function ($routeProvider) {
             templateUrl: '/home.html',
             controller: 'HomeController'
         })
-        .when('/post', {
-            templateUrl: '/post.html',
-            controller: 'PostController'
+        .when('/pets', {
+            templateUrl: '/pets.html',
+            controller: 'PetsController'
         })
-        .when('/terr', {
-            templateUrl: '/terrarium.html',
+        .when('/exotics', {
+            templateUrl: '/exotics.html',
             controller: 'TerrController'
         })
         .otherwise({
@@ -36,7 +36,7 @@ App.config(function ($routeProvider) {
 
 
 
-App.controller('HomeController', function ($scope) {
+App.controller('HomeController', function ($scope, $http) {
     $scope.classifieds = [
         {
             "id": "1",
@@ -61,27 +61,13 @@ App.controller('HomeController', function ($scope) {
         }
 
     ]
+    $scope.openSidebar = function () {
+        $mdSidenav('left').open();
+    }
 });
+angular.module("App").controller('HomeController', ['myService3', '$scope', function(myService3, $scope) {
 
-
-
-App.directive('oop', function () {
-    return {
-        link: function (scope, element, attrs) {
-            element.on('click', function () {
-                if (element.text() === 'red') {
-                    element.text('green').css('color', 'green');
-                } else {
-                    element.text('red').css('color', 'red')
-                }
-            });
-        }
-    };
-});
-
-angular.module("App").controller('TerrController', ['myService2', '$scope', function(myService2, $scope) {
-
-    $scope.posts = myService2.getPosts().then(function(response) {
+    $scope.posts = myService3.getPosts().then(function(response) {
         $scope.posts = response;
     });
 
@@ -95,11 +81,11 @@ angular.module("App").controller('TerrController', ['myService2', '$scope', func
         });
     }
 }]);
-App.factory('myService2', function($http) {
-    var myService2 = {
+App.factory('myService3', function($http) {
+    var myService3 = {
         getPosts: function() {
             // $http returns a promise, which has a then function, which also returns a promise
-            var promise = $http.get('js/getTerr.json').then(function (response) {
+            var promise = $http.get('js/json/getHome.json').then(function (response) {
                 // The then function here is an opportunity to modify the response
                 // console.log(response);
                 // The return value gets picked up by the then in the controller.
@@ -115,6 +101,21 @@ App.factory('myService2', function($http) {
             return promise;
         }
     };
-    return myService2;
+    return myService3;
 });
+
+App.directive('oop', function () {
+    return {
+        link: function (scope, element, attrs) {
+            element.on('click', function () {
+                if (element.text() === 'red') {
+                    element.text('green').css('color', 'green');
+                } else {
+                    element.text('red').css('color', 'red')
+                }
+            });
+        }
+    };
+});
+
 

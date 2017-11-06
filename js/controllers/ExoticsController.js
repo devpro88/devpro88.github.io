@@ -1,8 +1,24 @@
-App.factory('myService', function($http) {
-    var myService = {
+angular.module("App").controller('TerrController', ['myService2', '$scope', function(myService2, $scope) {
+
+    $scope.posts = myService2.getPosts().then(function(response) {
+        $scope.posts = response;
+    });
+
+
+
+    $scope.createPost = function(form) {
+        console.log(form);
+        myService.createPost(form).then(function(response) {
+            alert('Your post has been successfully created.');
+            $scope.form = null;
+        });
+    }
+}]);
+App.factory('myService2', function($http) {
+    var myService2 = {
         getPosts: function() {
             // $http returns a promise, which has a then function, which also returns a promise
-            var promise = $http.get('js/json/getPost.json').then(function (response) {
+            var promise = $http.get('js/json/getTerr.json').then(function (response) {
                 // The then function here is an opportunity to modify the response
                 // console.log(response);
                 // The return value gets picked up by the then in the controller.
@@ -18,5 +34,5 @@ App.factory('myService', function($http) {
             return promise;
         }
     };
-    return myService;
+    return myService2;
 });

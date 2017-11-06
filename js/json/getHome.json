@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Play with your dog!",
+    "comments": [
+      {
+        "image1": "img/img0/barack-obama-and-his-dog.jpg",
+        "alt1": "Sailfin Molly",
+        "description": "After a busy day, your pet will help you relax :)",
+        "available": "Even if you are a president, you can still enrich your life $$"
+      }
+    ]
+  },
+  {
+    "title": "Run with your dog!",
+    "comments": [
+      {
+        "image21": "img/img0/barack-obama-like-dog.jpg",
+        "alt21": "Dwarf Gourami",
+        "description2": "Although, maybe not everyone will understand ...",
+        "description22": "But for you and your dog are good and fun - and this is the main thing!",
+        "available2": "Let the ill-wishers envy, but the friends are having fun with you :)"
+      }
+    ]
+  }
+]
+

@@ -48,3 +48,19 @@ var name = 'Ruslan';
 console.log(name);
 var lastName = 'Bondar';
 console.log(lastName);
+
+var msg = "Hello World!";
+console.log("1- "+msg.startsWith("Hello"));
+console.log("2- "+msg.endsWith("World!"));
+console.log("3- "+msg.includes("o"));
+console.log("4- "+msg.startsWith("o", 4));
+console.log("5- "+msg.endsWith("o", 8));
+console.log("6- "+msg.includes("o", 7));
+
+console.log("abc".repeat(3));
+
+// var html = `
+// <div>
+//   <h1>Hello</h1>
+// </div>`.trim();
+// console.log(html);
